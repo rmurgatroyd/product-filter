@@ -1,0 +1,241 @@
+html{
+  margin: 0px;
+}
+
+body {
+  font-family: 'Arimo', sans-serif;
+  margin: 0px;
+  width: 100%;
+  background-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+/* Hero */
+
+.page-hero{
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  background-image: url("img/socks-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+ }
+
+.hero-title{
+    font-family: 'Ultra', serif;
+    font-size: 4em;
+    padding-top: 1.5em;
+    padding-bottom: 0.5em;
+}
+
+.hero-subtitle{
+  font-weight: bolder;
+  padding-top: 0.5em;
+  padding-bottom: 3.5em;
+  font-size: 2em;
+}
+
+/* Filters */
+
+/* Filter section layout */
+.filter-form{
+  background-color: #55E088;
+  padding: 1em 0em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+@media only screen and (max-width: 805px){
+.filter-form{
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+}
+
+.filter-header{
+  text-align: center;
+  margin: 0.5em 1em;
+  font-size: 1.5em;
+}
+
+/* Filters discounting title */
+.form-list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Checkboxes discounting list title */
+.checkbox-list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 805px){
+.checkbox-list{
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+}
+
+/* Each checkbox list */
+.checkbox-section{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 575px){
+.checkbox-section{
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+}
+}
+
+.checkbox-title{
+font-variant: small-caps;
+font-size: 1.5em;
+margin: 0.5em 1em;
+}
+
+.checkbox-description{
+  margin: 0em 0.5em ;
+  font-size: 0.8em;
+}
+
+/* Checkbox design */
+.checkbox{
+  margin: 1em;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #FFFFFF;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ED6F7A;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #FFFFFF;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #ED6F7A;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Products */
+
+.product-grid{
+  display: grid;
+  margin: 2em 2em;
+  grid-template-rows: auto auto;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+
+}
+
+@media only screen and (max-width: 1439px){
+.product-grid{
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 50% 50%;
+}
+}
+
+@media only screen and (max-width: 767px){
+.product-grid{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+}
+
+.product{
+  margin: 2em;
+  padding: 3em;
+  background-color:#FFB620;
+}
+
+.product-image{
+  object-fit: contain;
+  width: 100%;
+}
+
+.product-price{
+  font-size: 1.2em;
+
+}
+
+.product-subtitle{
+  font-size: 1.4em;
+  font-variant: small-caps;
+}
+
+/* No products displayed */
+.apology{
+  text-align: center;
+  font-size: 2em;
+  margin: 5em 3em;
+}
